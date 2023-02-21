@@ -1,0 +1,10 @@
+<ul class="mt-12">
+    <li *ngFor="let todo of loadingTasks; let i = index">
+        <app-todo-list-item
+            [i]="i"
+            [todo]="todo"
+            (toggleComplete)="onToggleTodoComplete($event)"
+            (remove)="onRemoveTodo($event)">
+        </app-todo-list-item>
+    </li>
+</ul>

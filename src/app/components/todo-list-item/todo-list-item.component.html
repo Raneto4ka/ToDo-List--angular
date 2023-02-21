@@ -1,0 +1,10 @@
+<div class="mt-2 flex justify-start align-middle flex-row">
+    <label
+        [ngClass]="{'line-through': todo.checked}">
+        <input type="checkbox" [checked]="todo.checked"
+        (click)="toggleTodoComplete(i)">
+            {{ todo.task }}
+    </label>
+
+    <button class="ml-auto self-start" (click)="removeTodo(i)">&times;</button>
+</div>
